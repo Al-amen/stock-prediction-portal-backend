@@ -37,7 +37,7 @@ class RegisterAPIView(generics.CreateAPIView):
         token = generate_email_verification_token(user)
 
         # Create frontend verification link
-        verify_link = f"http://localhost:5173/verify-email/?token={token}"
+        verify_link = f"https://stock-prediction-portal-frontend-al.vercel.app/verify-email/?token={token}"
 
         # Send verification email
         send_mail(
@@ -118,7 +118,7 @@ class PasswordResetRequestAPIView(APIView):
             user = User.objects.get(email=email)
             token = PasswordResetTokenGenerator().make_token(user)
             uidb64 = urlsafe_base64_encode(force_bytes(user.pk))
-            reset_link = f"http://localhost:5173/reset-password/{uidb64}/{token}/"
+            reset_link = f"https://stock-prediction-portal-frontend-al.vercel.app/reset-password/{uidb64}/{token}/"
 
             send_mail(
                 subject="Password Reset",
