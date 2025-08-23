@@ -191,8 +191,18 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')  # SMTP server password
 EMAIL_USE_SSL = False  # Set to True if using SSL
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')  # Default sender email address
 
-
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:8080",
+    "http://127.0.0.1:9000",
+    "http://localhost:5173",
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "http://localhost:5175",
+    "http://localhost:5176",
+    "http://localhost:5177",
+    "https://stock-prediction-portal-frontend-al.vercel.app/",
+]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR/'media'
