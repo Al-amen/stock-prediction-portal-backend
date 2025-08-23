@@ -1,0 +1,1 @@
+web: stock_prediction_main.wsgi --log-file -
