@@ -201,7 +201,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5175",
     "http://localhost:5176",
     "http://localhost:5177",
-    "https://stock-prediction-portal-frontend-al-green.vercel.app"
+    "https://stock-prediction-portal-frontend-alamen-i704wj1ai.vercel.app"
 ]
 
 MEDIA_URL = '/media/'
